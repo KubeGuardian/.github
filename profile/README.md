@@ -9,7 +9,7 @@ To overcome these challenges we suggest our solution named KubeGuardian. We impl
 * Embracing observability and monitoring.
 
 ## Global Architecture
-![Alt text](../images/global.png)
+![Alt text](https://github.com/KubeGuardian/.github/blob/main/images/global.png)
 The architecture phase is a crucial stage in the development of a system or software application.
 
 Our project is deployed in Kubernetes  cluster which is composed of master node, 2 worker nodes and NFS server. 
