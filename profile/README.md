@@ -17,7 +17,7 @@ Our project is deployed in Kubernetes  cluster which is composed of master node,
 We deployed a microservice application in Kubernetes cluster to ensure high availability, auto-healing,  storage orchestration and secret configuration management.
 
 ## Microservices Application Architecture : Internship matcher
-![Alt text](../images/microservices.png)
+![Alt text](https://github.com/KubeGuardian/.github/blob/main/images/microservices.png)
 Internship Matcher is a microservices based application. 
 
 Each microservice is completely seprated with its own database. 
@@ -27,7 +27,7 @@ Clients will only talk with the API gateway service, who's role to coordinate be
 Services communicate with each other using gRPC protocol.
 
 ## Highly Available PostgreSQL  Cluster Architecture
-![Alt text](../images/postgreSql.png)
+![Alt text](https://github.com/KubeGuardian/.github/blob/main/images/postgreSql.png)
 
 The combined implementation of RepMgr and Pg-pool ensures the high availability of the PostgreSQL cluster, minimizing downtime and ensuring uninterrupted access to data.
 
