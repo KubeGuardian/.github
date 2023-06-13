@@ -33,4 +33,42 @@ The combined implementation of RepMgr and Pg-pool ensures the high availability 
 
 Next, we emplemented pod anti-affinity for fault-tolerant PostgreSQL deployment in Kubernetes.
 
+## Monitoring Architecture
+![Alt text](https://github.com/KubeGuardian/.github/blob/main/images/monitoring.png)
+The main role of Prometheus is to collect and centrealize  performance metrics from the application and the Kubernetes cluster itself.
+
+We can then visualize these performance metrics with dashboards and panels in Grafana.
+
+## intrusion Prevention System Architecture
+![Alt text](https://github.com/KubeGuardian/.github/blob/main/images/opa.png)
+Gatekeeper utilizes the Kubernetes Admission Controller to intercept and validate requests.
+
+The Admission Controller process consists of Mutating and Validating controllers.
+
+The Validating admission process determines whether to allow or reject the request based on the decision of the registered webhook.
+
+OPA Gatekeeper enables the enforcement of policies on Kubernetes resources like Pods, Deployments, and Jobs.
+
+Gatekeeper acts as a crucial layer for preventing malicious behavior within the Kubernetes cluster.
+
+It ensures that requests are validated before being persisted to the etcd database.
+
+Gatekeeper provides powerful components for policy enforcement and maintaining security in the cluster.
+
+
+## Intrusion Detection System Architecture
+![Alt text](https://github.com/KubeGuardian/.github/blob/main/images/falco.png)
+Kubernetes Audit Logs provide visibility into the API Server's activities and events within the cluster.
+
+FluentBit is used as a log collector to gather and manage Kubernetes Audit Logs.
+
+Falco is an open-source cloud-native runtime security project for detecting abnormal behaviors in containerized environments, specifically in Kubernetes.
+
+Falco monitors system calls and container activities to identify potential security threats in real-time.
+
+A kernel module within the host operating system enables Falco to intercept and analyze system calls made by containers and processes.
+
+When suspicious behavior is detected, Falco triggers an alert sent to Falcosidekick.
+
+Falcosidekick serves as an intermediary, forwarding the alert to the web UI for analysis and action.
 
