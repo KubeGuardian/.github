@@ -1,1 +1,2 @@
-# .github
+# KubeGuardian Project
+## Application Architecture
